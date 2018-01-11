@@ -14,29 +14,23 @@
         <form id="politicalForm">
 
           <div id="ageQuestion">
-            <p>1.What is your age?</p>
+            <p>1. How do you feel about same-sex marriage?</p>
             <div class="radio">
               <label>
-                <input type="radio" name="age" value="under18">
-                under 18 years old
+                <input type="radio" name="sameSexMarriage" value="sameSexMarriageInFavor">
+                I'm all for it.
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="age" value="under25">
-                18-25 years old
+                <input type="radio" name="sameSexMarriage" value="sameSexMarriageUndecided">
+                I don't have a strong opinion about same-sex marriage.
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="name" value="under50">
-                25-50 years old
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="name" value="over50">
-                over 50 years old
+                <input type="radio" name="sameSexMarriage" value="sameSexMarriageAgainst">
+                I'm against it.
               </label>
             </div>
           </div>
@@ -52,7 +46,7 @@
             <div class="radio">
               <label>
                 <input type="radio" name="abortion" value="abortionUndecided">
-                I don't have a strong oponion about abortion.
+                I don't have a strong opinion about abortion.
               </label>
             </div>
             <div class="radio">
@@ -63,7 +57,7 @@
             </div>
           </div>
 
-          <div class="globalWarmingQuestion">
+          <div id="globalWarmingQuestion">
             <p>2. How do you feel about Global Warming?</p>
             <div class="radio">
               <label>
@@ -74,7 +68,7 @@
             <div class="radio">
               <label>
                 <input type="radio" name="globalWarming" value="globalWarmingUndecided">
-                I don't have a strong oponion about global warming.
+                I don't have a strong opinion about global warming.
               </label>
             </div>
             <div class="radio">
@@ -85,7 +79,7 @@
             </div>
           </div>
 
-          <div class="globalWarmingQuestion">
+          <div id="globalWarmingQuestion">
             <p>3. How do you feel about Gun Control?</p>
             <div class="radio">
               <label>
@@ -96,7 +90,7 @@
             <div class="radio">
               <label>
                 <input type="radio" name="gunControl" value="gunControlUndecided">
-                I don't have a strong oponion about gun control.
+                I don't have a strong opinion about gun control.
               </label>
             </div>
             <div class="radio">
@@ -107,7 +101,7 @@
             </div>
           </div>
 
-          <div class="welfareQuestion">
+          <div id="welfareQuestion">
             <p>4. How do you feel about Welfare?</p>
             <div class="radio">
               <label>
@@ -118,7 +112,7 @@
             <div class="radio">
               <label>
                 <input type="radio" name="welfare" value="welfareUndecided">
-                I don't have a strong oponion about welfare
+                I don't have a strong opinion about welfare.
               </label>
             </div>
             <div class="radio">
@@ -128,10 +122,12 @@
               </label>
             </div>
           </div>
-
-          </div>
+          <button type="submit" class="btn btn-primary">Submit!</button>
         </form>
       </div>
-    </div>
+      <div id="result">
+        Your political affiliation is <span id="affiliation"></span>.
+      </div>
+      </div>
   </body>
 </html>
