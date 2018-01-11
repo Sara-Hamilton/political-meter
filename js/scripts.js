@@ -6,6 +6,10 @@ $(document).ready(function(){
     var gunControlAnswer = $("input:radio[name=gunControl]:checked").val();
     var welfareAnswer = $("input:radio[name=welfare]:checked").val();
 
+    if (!sameSexMarriageAnswer || !abortionAnswer || !globalWarmingAnswer || !gunControlAnswer || !welfareAnswer) {
+      alert("Please answer all questions.")
+    }
+
     if (sameSexMarriageAnswer === "sameSexMarriageInFavor" && abortionAnswer === "abortionInFavor" && globalWarmingAnswer === "globalWarmingInFavor" && gunControlAnswer === "gunControlInFavor" && welfareAnswer ==="welfareInFavor") {
       var politicalAffiliation = "very liberal"
     } else if (sameSexMarriageAnswer === "sameSexMarriageUndecided" && abortionAnswer === "abortionUndecided" && globalWarmingAnswer === "globalWarmingUndecided" && gunControlAnswer === "globalControlUndecided" && welfareAnswer ==="welfareUndecided"){
@@ -16,8 +20,10 @@ $(document).ready(function(){
       var politicalAffiliation = "neither extremely conservative or liberal"
     }
 
+    if (sameSexMarriageAnswer && abortionAnswer && globalWarmingAnswer && gunControlAnswer && welfareAnswer ) {
     $("#affiliation").empty().append(politicalAffiliation);
     $("#result").show();
+    }
 
     event.preventDefault();
   });
